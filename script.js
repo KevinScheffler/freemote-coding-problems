@@ -91,6 +91,48 @@ var countOdd = function(n) {
 }
 
 
-console.log(countOdd(5));
-console.log(countOdd(10));
-console.log(countOdd(1));
+// console.log(countOdd(5));
+// console.log(countOdd(10));
+// console.log(countOdd(1));
+
+
+// sumMultiples
+var sumMultiples = function(n) {
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    if ((i % 3 === 0) || (i % 5 === 0))  {
+      sum += i
+    }
+  }
+  return sum;
+}
+
+// console.log(sumMultiples(10));
+// var unbalancedArray = function(nums) {
+//   return nums.reduce(function(sum, num) {
+//     return sum + num;
+//   });
+// }
+
+var unbalancedArray = function(nums) {
+  return nums.reduce((sum, num) => {
+    return sum + num
+  });
+}
+
+
+// console.log(unbalancedArray([-1, 4, 1, 5, -4]));
+
+// countVowels
+var countVowels = function(s) {
+  let split = s.split('')
+  let vowels = 0;
+  for (let i = 0; i < split.length; i++) {
+    if (split[i] === 'a' || split[i] === 'e' || split[i] === 'i' || split[i] === 'o' || split[i] === 'u') {
+      vowels++; 
+    }
+  }
+  return vowels;
+}
+
+console.log(countVowels('adsbecdei'));
